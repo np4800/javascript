@@ -88,17 +88,19 @@
 
       <!-- Parameter box - This will hide on clicking json option in the content type -->
       <div id="parameterBox">
-        <div class="form-row">
+        <div class="form-row my-2">
           <label for="url" class="col-sm-2 col-form-label">Parameters</label>
           <div class="col-md-4">
-            <input type="text" class="form-control" id="parameterKey1" placeholder="Parameter Key">
+            <input type="text" class="form-control" id="parameterKey1" placeholder="Parameter Key 1">
           </div>
           <div class="col-md-4">
-            <input type="text" class="form-control" id="parameterValue1" placeholder="Parameter Value">
+            <input type="text" class="form-control" id="parameterValue1" placeholder="Parameter Value 1">
           </div>
-          <button class="btn btn-primary">+</button>
+          <button class="btn btn-primary" id="addParam">+</button>
         </div>
+        <div id="params"></div>
       </div>
+
 
       <!-- JSON Request box - This will hide on clicking parameters options n content type -->
       <div class="my-3" id="requestJsonBox">
