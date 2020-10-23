@@ -83,4 +83,22 @@ submit.addEventListener('click',()=>{
   console.log('RequestType: ', requestType);
   console.log('contentType: ', contentType);
   console.log('data:  ', data);
+  // If the request type is get then invoke the fetch api to create a post request
+   if (requestType == 'GET') {
+     fetch(url, {
+       method: 'GET'
+     }).then(response=> response.text()).then((text)=>{
+       document.getElementById('responseJsonText').value = text;
+     });
+   } else {
+     fetch(url, {
+       method: 'POST',
+       body: data,
+       headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            }
+     }).then(response=> response.text()).then((text)=>{
+       document.getElementById('responseJsonText').value = text;
+     });
+   }
 })
